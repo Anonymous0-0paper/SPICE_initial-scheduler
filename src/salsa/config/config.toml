@@ -1,0 +1,53 @@
+
+[karmada]
+apiserver_kubeconfig = "/home/cc/.kube/karmada.config"
+
+[scheduler]
+train = true
+max_timesteps = 80
+max_episodes = 600
+gamma = 0.99
+device = 'cpu'
+actor_lr = 1e-4
+critic_lr = 1e-3
+step_interval = 1 # in seconds
+start_training_after = 10 # in timesteps
+gather_metrics = true
+load_path = "" # Give a path for pretrained agent models directory or leave empty to trigger retraining
+# For loading models we rely on the naming convention '<agent_id>.pt'
+
+[scheduler.rewardsystem]
+slo_factor = 10.0
+prevention_factor = 5.0
+placement_factor = 4.0
+res_factor = 4.0
+mig_factor = 0.1
+load_balancing_factor = 0.1
+churn_factor = 0.1
+
+[scheduler.replay_buffer]
+lambda_prio = 2
+batch_size = 256
+
+[scheduler.global_coordinator]
+lambda_local = 0.3
+
+
+[thanos]
+url = "http://localhost:9090"
+
+# app_name refers to the microservice-level label and application_name to the application-level label
+# Adjust these if your deployments use a different labeling convention
+[thanos.queries]
+svc_request_rate = "sum by (app_name, application_name) (rate(mub_internal_processing_latency_milliseconds_count{}[2m]))"
+svc_delay = "sum by (app_name, application_name) (increase(mub_request_processing_latency_milliseconds_sum{}[2m])) / sum by (app_name, application_name) (increase(mub_request_processing_latency_milliseconds_count{}[2m]))"
+svc_internal_delay = "sum by (app_name, application_name) (increase(mub_internal_processing_latency_milliseconds_sum{}[2m])) / sum by (app_name, application_name) (increase(mub_internal_processing_latency_milliseconds_count{}[2m]))"
+
+[resources.default_requests]
+cpu = "500m"
+memory = "256Mi"
+
+[slo_predictor]
+latency_model = "lat_2svc"
+throughput_model = "thp_2svc"
+horizon_in_seconds = 180 # slo prediction lookahead represents delta in v_i(t + delta)

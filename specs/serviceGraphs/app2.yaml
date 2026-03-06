@@ -1,0 +1,113 @@
+dependencies:
+  s0:
+    - dependsOn: s1
+    - dependsOn: s2
+    - dependsOn: s3
+    - dependsOn: s28
+  s1:
+    - dependsOn: s4
+    - dependsOn: s7
+    - dependsOn: s9
+    - dependsOn: s29
+  s2:
+  s3:
+    - dependsOn: s5
+    - dependsOn: s8
+    - dependsOn: s41
+  s4:
+    - dependsOn: s6
+    - dependsOn: s12
+  s5:
+    - dependsOn: s24
+    - dependsOn: s36
+    - dependsOn: s47
+  s6:
+    - dependsOn: s17
+    - dependsOn: s25
+    - dependsOn: s30
+    - dependsOn: s31
+  s7:
+    - dependsOn: s14
+    - dependsOn: s16
+    - dependsOn: s34
+    - dependsOn: s38
+  s8:
+    - dependsOn: sdb1
+  sdb1:
+  s9:
+    - dependsOn: s10
+    - dependsOn: s19
+    - dependsOn: s23
+    - dependsOn: s37
+    - dependsOn: sdb2
+  sdb2:
+  s10:
+    - dependsOn: s11
+    - dependsOn: s13
+    - dependsOn: s26
+    - dependsOn: sdb2
+  s11:
+    - dependsOn: sdb2
+  s12:
+    - dependsOn: s20
+    - dependsOn: s21
+  s13:
+  s14:
+    - dependsOn: s15
+    - dependsOn: s22
+  s15:
+    - dependsOn: sdb1
+  s16:
+    - dependsOn: s33
+    - dependsOn: s43
+    - dependsOn: s45
+  s17:
+    - dependsOn: s18
+    - dependsOn: s27
+  s18:
+    - dependsOn: s35
+  s19:
+  s20:
+  s21:
+  s22:
+    - dependsOn: s46
+  s23:
+    - dependsOn: sdb1
+  s24:
+    - dependsOn: s39
+    - dependsOn: s40
+    - dependsOn: sdb1
+  s25:
+  s26:
+  s27:
+    - dependsOn: sdb2
+  s28:
+    - dependsOn: sdb1
+  s29:
+  s30:
+  s31:
+    - dependsOn: s32
+  s32:
+  s33:
+  s34:
+    - dependsOn: s49
+    - dependsOn: sdb2
+  s35:
+  s36:
+  s37:
+  s38:
+    - dependsOn: s42
+    - dependsOn: s44
+    - dependsOn: s48
+  s39:
+    - dependsOn: sdb2
+  s40:
+  s41:
+  s42:
+  s43:
+  s44:
+  s45:
+  s46:
+  s47:
+  s48:
+  s49:

@@ -1,0 +1,16 @@
+clusters:
+  - name: kube1
+    tierType: Cloud
+    cpuCores: 320
+    memGb: 502
+    cost:
+      cpuCoreHour: 0.08
+      memGbHour: 0.04
+
+  - name: kube2
+    tierType: Edge
+    cpuCores: 64
+    memGb: 187
+    cost:
+      cpuCoreHour: 0.06
+      memGbHour: 0.03

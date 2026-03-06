@@ -1,0 +1,12 @@
+apiVersion: networking.karmada.io/v1alpha1
+kind: MultiClusterService
+metadata:
+   name: {{ service_name }}
+   namespace: {{ namespace_name }}
+spec:
+  types:
+    - CrossCluster
+  consumerClusters:
+    {{ consumer_clusters | to_yaml | indent(4, false)}}
+  providerClusters:
+    {{ provider_clusters | to_yaml | indent(4, false)}}

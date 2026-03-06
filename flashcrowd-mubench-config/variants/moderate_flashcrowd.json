@@ -1,0 +1,11 @@
+{
+    "TrafficParameters": {
+        "ingress_service": "s0",
+        "request_parameters": {
+            "mean_interarrival_time": 200,
+            "stop_event": 2000
+        }
+    },
+    "OutputPath": "/root/workloads",
+    "OutputFile": "moderate_flashcrowd.json"
+}

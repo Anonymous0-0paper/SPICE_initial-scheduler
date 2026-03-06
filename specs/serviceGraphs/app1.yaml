@@ -1,0 +1,39 @@
+dependencies:
+  s0:
+    - dependsOn: s1
+    - dependsOn: s2
+  s1:
+    - dependsOn: s3
+    - dependsOn: s5
+    - dependsOn: s11
+    - dependsOn: s12
+  s2:
+    - dependsOn: s4
+    - dependsOn: s6
+    - dependsOn: s7
+    - dependsOn: s9
+    - dependsOn: s13
+    - dependsOn: s14
+    - dependsOn: sdb1
+  s3: []
+  s4: []
+  s5:
+    - dependsOn: s8
+    - dependsOn: sdb1
+  s6:
+    - dependsOn: sdb2
+  s7:
+    - dependsOn: sdb1
+  s8: []
+  s9:
+    - dependsOn: s10
+    - dependsOn: sdb1
+  s10: []
+  s11:
+    - dependsOn: sdb1
+  s12: []
+  s13: []
+  s14: []
+  sdb1: []
+  sdb2: []
+

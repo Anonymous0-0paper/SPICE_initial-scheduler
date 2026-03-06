@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "salsa-scheduler"
+version = "0.1.0"
+description = "Implementation of SALSA: SLO Aware MADRL-based Elastic Scheduling"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    # See requirements.txt
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+salsa-watcher = "salsa.sidecars.watcher:main"
+salsa-exporter = "salsa.tools.serviceExporter:main"
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore::DeprecationWarning:kubernetes.*"
+]

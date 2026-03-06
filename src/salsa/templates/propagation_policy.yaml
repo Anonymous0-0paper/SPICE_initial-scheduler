@@ -1,0 +1,15 @@
+apiVersion: policy.karmada.io/v1alpha1
+kind: PropagationPolicy
+metadata:
+  name: {{ policy_name }}
+  namespace: {{ namespace_name }}
+spec:
+  propagateDeps: true
+  resourceSelectors:
+    - apiVersion: {{ api_version }}
+      kind: {{ resource }}
+      name: {{ resource_id }}
+  placement:
+    clusterAffinity:
+      clusterNames:
+        {{ target_member | to_yaml | indent(8, false) }}

@@ -1,0 +1,65 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: thanos-receive
+spec:
+  type: NodePort
+  ports:
+  - port: 19291
+    name: remote-write
+    targetPort: 19291
+    nodePort: 31218
+  - port: 10901
+    name: grpc
+    targetPort: 10901
+  selector:
+    app: thanos-receive
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: thanos-receive
+spec:
+  serviceName: thanos-receive
+  replicas: 1
+  selector:
+    matchLabels:
+      app: thanos-receive
+  template:
+    metadata:
+      labels:
+        app: thanos-receive
+    spec:
+      securityContext:
+        fsGroup: 1001
+        runAsUser: 1001
+      containers:
+      - name: thanos-receive
+        image: quay.io/thanos/thanos:v0.32.5
+        args:
+        - receive
+        - --grpc-address=0.0.0.0:10901
+        - --remote-write.address=0.0.0.0:19291
+        - --receive.local-endpoint=thanos-receive-0.thanos-receive.default.svc.cluster.local:10901
+        - --receive.hashrings-file=/etc/thanos/hashring.json
+        - --tsdb.path=/var/thanos/receive
+        - --tsdb.retention=1d
+        - --label=receive_replica="0"
+        volumeMounts:
+        - name: hashring
+          mountPath: /etc/thanos
+        - name: data
+          mountPath: /var/thanos/receive
+      volumes:
+      - name: hashring
+        configMap:
+          name: hashring-config
+  volumeClaimTemplates:
+  - metadata:
+      name: data
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 5Gi
+

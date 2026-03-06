@@ -1,0 +1,382 @@
+name: app2
+
+microservices:
+  - name: s0
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 2000m
+      mem: 100Ki
+  - name: s1
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 2000m
+      mem: 100Ki
+  - name: s2
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s3
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s4
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s5
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s6
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s7
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s8
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s9
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s10
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s11
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s12
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s13
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s14
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s15
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s16
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s17
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s18
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s19
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s20
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s21
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s22
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s23
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s24
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s25
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s26
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s27
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s28
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s29
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s30
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s31
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s32
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s33
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s34
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s35
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s36
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s37
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s38
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s39
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s40
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s41
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s42
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s43
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s44
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s45
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s46
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s47
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s48
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+  - name: s49
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 1000m
+      mem: 100Ki
+
+  # Databases
+  - name: sdb1
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 3000m
+      mem: 1024Mi
+  - name: sdb2
+    desiredReplicas: 2
+    maxToleratedReplicas: 4
+    migrationCost: 1
+    resourceRequests:
+      cpu: 3000m
+      mem: 1024Mi
+
+entrypoint: s0
+migration_interval: 60 # seconds between migrations (counted per application)
+scaling_interval: 60 # seconds between scaling (counted per microservice)
+
+dependencyGraph: !include serviceGraphs/app2.yaml
+
+slo:
+  latency: 370
+  throughput: 40
+  penaltyCoefficient: 1
+  ViolationPredictor:
+    lookaheadInSeconds: 120

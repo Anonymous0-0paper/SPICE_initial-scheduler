@@ -1,0 +1,3 @@
+apps:
+  - !include apps/app1.yaml
+    # - !include apps/app2.yaml

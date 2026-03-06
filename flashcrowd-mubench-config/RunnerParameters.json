@@ -1,0 +1,18 @@
+{
+    "RunnerParameters": {
+        "ms_access_gateway": "http://<REPLACE_WITH_NGINX_INGRESS_IP>:80",
+        "workload_type": "file",
+        "workload_files_path_list": [
+            "/root/workloads/flashcrowd_workload.json"
+        ],
+        "workload_rounds": 1,
+        "thread_pool_size": 8,
+        "ingress_service": "s0",
+        "result_file": "flashcrowd_results.txt"
+    },
+    "OutputPath": "/root/results",
+    "AfterWorkloadFunction": {
+        "file_path": "Function",
+        "function_name": "get_prometheus_stats"
+    }
+}
